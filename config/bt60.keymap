@@ -45,7 +45,7 @@
                                 &trans &trans &kp PG_UP &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                                 &trans &kp HOME &kp PG_DN &kp END &trans &trans &trans &trans &trans &trans &trans &trans &trans
                                 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                                &trans &tog 1 &tog 0 &trans &trans &trans &trans &trans
+                                &trans &tog 1 &tog 0 &trans &trans &kp C_MENU &trans &trans
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
