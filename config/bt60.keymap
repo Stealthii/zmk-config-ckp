@@ -6,6 +6,18 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+  macros {
+    switch_mac: switch_mac {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&bt BT_SEL 0 &tog 0>;
+    };
+    switch_win: switch_win {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&bt BT_SEL 1 &tog 1>;
+    };
+  };
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -62,7 +74,7 @@
 		};
 		caps {
 			bindings = <
-                                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                                &trans &switch_mac &switch_win &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                                 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                                 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                                 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
