@@ -17,6 +17,46 @@
       #binding-cells = <0>;
       bindings = <&bt BT_SEL 1 &tog 1>;
     };
+    git_rebase: git_rebase {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_tap &kp G &kp R &kp B &kp I &kp RET>;
+    };
+    git_pull: git_pull {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_tap &kp G &kp P &kp R &kp RET>;
+    };
+    git_log: git_log {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_tap &kp G &kp L &kp O &kp L &kp RET>;
+    };
+    git_commit: git_commit {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_tap &kp G &kp C &kp RET>;
+    };
+    git_commit_all: git_commit_all {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_tap &kp G &kp C &kp A &kp RET>;
+    };
+    git_commit_amend: git_commit_amend {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_tap &kp G &kp C &kp EXCLAMATION &kp RET>;
+    };
+    git_commit_all_amend: git_commit_all_amend {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_tap &kp G &kp C &kp A &kp EXCLAMATION &kp RET>;
+    };
+    git_push_force: git_push_force {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_tap &kp G &kp P &kp F &kp RET>;
+    };
   };
 	keymap {
 		compatible = "zmk,keymap";
@@ -75,9 +115,9 @@
 		caps {
 			bindings = <
                                 &trans &switch_mac &switch_win &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                                &trans &trans &trans &trans &git_rebase &trans &trans &trans &trans &trans &git_pull &trans &trans &trans
+                                &trans &git_commit_amend &trans &trans &git_push_force &trans &trans &trans &trans &git_log &trans &trans &trans
+                                &trans &trans &trans &git_commit &trans &trans &trans &trans &trans &trans &trans &trans
                                 &trans &trans &trans &trans &trans &trans &trans &trans
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
